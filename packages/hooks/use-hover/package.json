@@ -1,0 +1,46 @@
+{
+  "name": "@raddix/use-hover",
+  "description": "A hook that listens for hover events on an element.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "author": "Moises Machuca Valverde <rolan.machuca@gmail.com> (https://www.moisesmachuca.com)",
+  "homepage": "https://raddix.dev/hooks/use-hover",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gdvu/raddix.git"
+  },
+  "keywords": [
+    "react-hook",
+    "react-hover-hook",
+    "react-use-hover",
+    "use-hover",
+    "use-hover-hook",
+    "hook-hover"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint \"{src,tests}/*.{ts,tsx,css}\"",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "build": "tsup src --dts",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "clean-package": "../../../clean-package.config.json",
+  "tsup": {
+    "clean": true,
+    "target": "es2019",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}
